@@ -1,8 +1,15 @@
 # windows-release-api
 A RESTful API for Windows release information.
 
-## Get all Windows release information
-- **Endpoint:** **GET** `https://windows-release.azurewebsites.net/windows.json`
+## Usage
+Running the script directly will fetch the latest Windows release information and save it to a local `windows.json` file. It also starts a Flask server for API access.
+
+```powershell
+python app.py
+```
+
+## Get all Windows release information via API
+- **Endpoint:** **GET** `http://127.0.0.1:5001/windows.json`
 - **Supported products**: Windows 10, Windows 11.
 - **Request parameters**: No.
 - **Responses**: an array. Each element contains the information about a Windows product, its release information URL, and a list of its versions.
